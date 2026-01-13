@@ -19,6 +19,7 @@ The objective of this week is to build a strong mathematical and practical found
 
 ## Repository Structure
 
+```
 NeuroApp-ML-Internship-Week-3/
 │
 ├── linear_regression_scratch.py
@@ -29,8 +30,8 @@ NeuroApp-ML-Internship-Week-3/
 ├── README.md
 └── plots/
     └── Contains all generated graphs including regression lines, cost convergence plots, residual plots, and polynomial regression visualizations
+```
 
----
 
 ## Task 3.1 — Linear Regression from Scratch
 
