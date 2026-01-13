@@ -49,21 +49,40 @@ Where:
 
 ### Optimization Method
 
-Gradient Descent is used to minimize Mean Squared Error (MSE):
+Gradient Descent is used to minimize the **Mean Squared Error (MSE)** in linear regression.
 
-\[
-MSE = \frac{1}{m} \sum (y - y_{pred})^2
-\]
+#### Mean Squared Error (MSE)
 
-Gradient update rules:
+The MSE measures the average squared difference between predicted and actual values:
 
-\[
-w = w - \alpha \frac{\partial MSE}{\partial w}
-\]
+MSE = (1/m) * Σ (y_i - y_pred_i)^2
 
-\[
-b = b - \alpha \frac{\partial MSE}{\partial b}
-\]
+markdown
+Copy code
+
+Where:  
+- `m` = number of training examples  
+- `y_i` = actual value of the i-th sample  
+- `y_pred_i` = predicted value of the i-th sample  
+
+#### Gradient Descent Update Rules
+
+The weight `w` and bias `b` are updated iteratively to minimize MSE:
+
+w = w - α * (∂MSE / ∂w)
+b = b - α * (∂MSE / ∂b)
+
+markdown
+Copy code
+
+Where:  
+- `w` = weight (slope)  
+- `b` = bias (intercept)  
+- `α` = learning rate  
+- `∂MSE/∂w` and `∂MSE/∂b` = gradients of MSE with respect to `w` and `b`  
+
+> These updates are repeated until the MSE converges or a maximum number of iterations is reached.
+
 
 ### Features Implemented
 
