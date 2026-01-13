@@ -1,4 +1,5 @@
 # NeuroApp ML Internship — Week 3  
+
 ## Introduction to Machine Learning
 
 This repository contains the complete implementation of Week 3 internship tasks focused on core Machine Learning concepts including regression modeling, optimization using gradient descent, model evaluation, overfitting analysis, and model persistence.
@@ -27,11 +28,7 @@ NeuroApp-ML-Internship-Week-3/
 ├── load_and_predict.py
 ├── README.md
 └── plots/
-
-yaml
-Copy code
-
-The `plots` folder contains all generated graphs including regression lines, cost convergence plots, residual plots, and polynomial regression visualizations.
+    └── Contains all generated graphs including regression lines, cost convergence plots, residual plots, and polynomial regression visualizations
 
 ---
 
@@ -41,10 +38,9 @@ This task implements simple linear regression without using any machine learning
 
 ### Model Equation
 
+\[
 y = wx + b
-
-vbnet
-Copy code
+\]
 
 Where:
 
@@ -55,18 +51,19 @@ Where:
 
 Gradient Descent is used to minimize Mean Squared Error (MSE):
 
-MSE = (1/m) * Σ(y − y_pred)²
-
-sql
-Copy code
+\[
+MSE = \frac{1}{m} \sum (y - y_{pred})^2
+\]
 
 Gradient update rules:
 
-w = w − α * dMSE/dw
-b = b − α * dMSE/db
+\[
+w = w - \alpha \frac{\partial MSE}{\partial w}
+\]
 
-yaml
-Copy code
+\[
+b = b - \alpha \frac{\partial MSE}{\partial b}
+\]
 
 ### Features Implemented
 
@@ -142,8 +139,8 @@ A trained regression model is saved in all three formats and then loaded for pre
 
 | Format  | File Size (bytes) | Load Time (seconds) | Prediction Supported |
 |--------|------------------|--------------------|----------------------|
-| Pickle | Measured using os.path.getsize() | Measured using time module | Yes |
-| Joblib | Measured using os.path.getsize() | Measured using time module | Yes |
+| Pickle | Measured using `os.path.getsize()` | Measured using `time` module | Yes |
+| Joblib | Measured using `os.path.getsize()` | Measured using `time` module | Yes |
 | JSON   | Smallest (weights only) | Fastest | Manual prediction |
 
 ### Observations
@@ -160,15 +157,18 @@ A trained regression model is saved in all three formats and then loaded for pre
 
 ```bash
 pip install numpy matplotlib scikit-learn joblib
-Run Each Task
-bash
-Copy code
+
+## Run Each Task
+
 python linear_regression_scratch.py
 python multiple_regression.py
 python polynomial_regression.py
 python model_persistence.py
 python load_and_predict.py
-Learning Outcomes
+
+
+### Learning Outcomes
+
 By completing this week, the following skills were developed:
 
 Mathematical understanding of regression
@@ -179,14 +179,16 @@ Model evaluation metrics
 
 Overfitting analysis
 
-Real-world ML pipeline
+Real-world ML pipeline implementation
 
 Model serialization and deployment concepts
 
 Internship Program
+
 This project is part of the NeuroApp Machine Learning Internship Program
 Week 3: Introduction to Machine Learning
 
-Author
+##  Author
+
 Hamza Ahmad
 NeuroApp ML Intern
